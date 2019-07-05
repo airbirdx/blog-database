@@ -1,35 +1,40 @@
 language: node_js
-node_js:
-- 8.9.0
+node_js: stable
+
+addons: # Travis CI建议加的，自动更新api
+  apt:
+    update: true
+
 cache:
-  directories:
-  - node_modules
-before_install:
-- npm install hexo-cli -g
+  directories: 
+  - node_modules # 缓存 node_modules
+
 install:
-- npm install
+- npm install # 初次安装，在CI环境中，执行安装npm依赖
+
 script:
 - hexo clean
 - hexo generate
+
 after_script:
   - cd ./public
   - git init
-  - git config user.name "github用户名"
-  - git config user.email "github邮箱"
+  - git config user.name "airbirdx"
+  - git config user.email "mqliutong@163.com"
   - git add .
-  - git commit -m "TravisCI 自动部署"
+  - git commit -m "travis-ci auto deploy at `date +"%Y-%m-%d %H:%M"`"
   # Github Pages
-  - git push --force --quiet "https://${CI_TOKEN}@${GH_REF}" master:master 
+  - git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:master 
   # Coding Pages
-  - git push --force --quiet "https://coding用户名:${CO_TOKEN}@${CO_REF}" master:master
+  - git push --force --quiet "https://airbird:${CD_TOKEN}@${CD_REF}" master:master
 
 branches:
   only:
-  - indigo   这里替换你要监听的分支
+  - master   这里替换你要监听的分支
 
 env:
  global:
    # Github Pages
-   - GH_REF: github.com/lanpangzhi/lanpangzhi.github.io  这里替换你的github仓库地址
+   - GH_REF: github.com/airbirdx/airbirdx.github.io.git  这里替换你的github仓库地址
    # Coding Pages
-   - CO_REF: git.coding.net/bule/bule.coding.me.git  这里替换你的coding仓库地址
+   - CD_REF: git.coding.net/airbird/airbird.git  这里替换你的coding仓库地址
