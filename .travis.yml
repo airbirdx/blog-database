@@ -18,7 +18,6 @@ install:
 script:
   - hexo clean
   - hexo g
-  - hexo g
 
 after_script:
   #- ./auto_deploy_script.sh
