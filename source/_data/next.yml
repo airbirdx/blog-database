@@ -144,7 +144,7 @@ avatar:
   # In theme directory (source/images): /images/avatar.gif
   # In site directory (source/uploads): /uploads/avatar.gif
   # You can also use other linking images.
-  url: /uploads/avatar.gif #-----$%^&*-----#
+  url: /uploads/avatar.jpg #-----$%^&*-----#
   
 
 
@@ -152,7 +152,7 @@ avatar:
 back2top:
   enable: true
   # Back to top in sidebar.
-  sidebar: false
+  sidebar: true #-----$%^&*-----#
   # Scroll percent label in b2t button.
   scrollpercent: true #-----$%^&*-----#
 
