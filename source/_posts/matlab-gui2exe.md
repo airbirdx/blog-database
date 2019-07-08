@@ -107,4 +107,4 @@ e Macro that generates a C Windows application on the Windows platform. On
 
 ```
 
-![mcc -e](http://o85gvbiad.bkt.clouddn.com/20160609-matlab-gui2exe-mcce.png)
+![mcc -e](https://airbird-1252162485.cos.ap-shanghai.myqcloud.com/20160609-matlab-gui2exe-mcce.png)

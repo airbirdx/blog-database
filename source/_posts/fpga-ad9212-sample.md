@@ -13,7 +13,7 @@ tags:
 ## AD9212简介
 详细说明可以在[ADI官网](http://www.analog.com/cn/index.html)上进行搜索查看，具体的一些性能细节这里就不进行详细的介绍了。
 ADC芯片在某一时刻采集到电压数据后会在一个时钟周期内将数据串行的输出，若使用FPGA对数据进行接收，所需要做的操作就只是一个串并转换，还是比较简单的对吧。在这里由于AD9212的数据传输是使用的LVDS输出，也可以使用Altera官方（对，我们用的是A家的芯片）的LVDS_RX的IP核进行接收。下面我们把AD9212的一个时序图放上来作为镇文之图。
-![镇文之时序图](http://o85gvbiad.bkt.clouddn.com/20161024-ad9212-original-timing.png)
+![镇文之时序图](https://airbird-1252162485.cos.ap-shanghai.myqcloud.com/20161024-ad9212-original-timing.png)
 从图中可以看出DCO作为数据传出的时钟是上下边沿触发的，在每个边沿数据D有效。FCO作为帧定界的信号且与数据D同步，一个时钟周期内10位的有效数据D，且高位在前。主要信息就这些了，信号FCO、DCO、D接入FPGA。
 <!--more-->
 
@@ -26,9 +26,9 @@ ADC芯片在某一时刻采集到电压数据后会在一个时钟周期内将�
 
 这里最后一个处理中之所以有两种情况是因为LVDS_RX在读的过程中无法确保其开始位置，故这里将两种方法都进行考虑后进行综合。下图描述了LVDS_RX在读取时的两种可能的状态。
 * **状态1**
-![CASE1](http://o85gvbiad.bkt.clouddn.com/20161024-ad9212-lvds-case-1.png)
+![CASE1](https://airbird-1252162485.cos.ap-shanghai.myqcloud.com/20161024-ad9212-lvds-case-1.png)
 * **状态2**
-![CASE2](http://o85gvbiad.bkt.clouddn.com/20161024-ad9212-lvds-case-2.png)
+![CASE2](https://airbird-1252162485.cos.ap-shanghai.myqcloud.com/20161024-ad9212-lvds-case-2.png)
 
 ## 方法2——根据时序自行处理
 

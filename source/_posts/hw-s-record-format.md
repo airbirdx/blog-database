@@ -16,7 +16,7 @@ S-Reord是一种由摩托罗拉公司创建的文件格式（不得不说，摩�
 ## S-Record格式详解
 
 在维基百科上看到的这幅图把S-Record格式表达的十分完善，在此引用一下。
-![Motorola S-record format ready reckoner](http://o85gvbiad.bkt.clouddn.com/20161229-Motorola-SREC-Chart.png)
+![Motorola S-record format ready reckoner](https://airbird-1252162485.cos.ap-shanghai.myqcloud.com/20161229-Motorola-SREC-Chart.png)
 
 **注意**：
 * 此图中的每一个格子表示一个字符，其中在中间一条主格式下面的2 Bytes表示两个字符，其真实存储时为两个字符（一个字符的ASCII码为一个字节）。

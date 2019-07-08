@@ -23,7 +23,7 @@ tags:
 
 完成后的bat在双击后运行如下图所示，有3个选项可供选择。
 
-![下载选项界面](http://o85gvbiad.bkt.clouddn.com/20170626-quartus-bat-download-results.png)
+![下载选项界面](https://airbird-1252162485.cos.ap-shanghai.myqcloud.com/20170626-quartus-bat-download-results.png)
 
 [0] 运行Altera Nios2 Command Shell
 * 选择此项后将会正常进入到Altera Nios2 Command Shell命令行界面
@@ -207,9 +207,9 @@ nios2-configure-sof --help
 ```
 
 * `nios2-configure-sof`表示sof下载，其后台调用quartus_pgm将sof进行文件下载，等价于如下图形界面下的红框中操作。
-	![quartus_pgm等效](http://o85gvbiad.bkt.clouddn.com/20170626-quartus-bat-download-equivalence-quartus_pgm.png)
+	![quartus_pgm等效](https://airbird-1252162485.cos.ap-shanghai.myqcloud.com/20170626-quartus-bat-download-equivalence-quartus_pgm.png)
 * `nios2-download`表示elf在线下载，等价于等价于如下图形界面下的红框中操作。
-	![nios2-download等效](http://o85gvbiad.bkt.clouddn.com/20170626-quartus-bat-download-equivalence-nios2-download.png)
+	![nios2-download等效](https://airbird-1252162485.cos.ap-shanghai.myqcloud.com/20170626-quartus-bat-download-equivalence-nios2-download.png)
 * `nios2-terminal`表示进入调试模式，此时下载进去的程序才会运行，同时命令行窗口还将会显示和NiosII软件中一致的信息。
 * `sof2flash`表示将sof文件转换成S-Record格式的flash文件，方便下载。
 * `elf2flash`表示将sof文件转换成S-Record格式的flash文件，这里需要注意生成时需要加上`--after sw.flash`，表示elf程序的地址信息从sof之后开始。

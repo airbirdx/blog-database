@@ -46,7 +46,7 @@ SPI(Serial Peripheral Interface)，中文为串行外设接口。是一种由摩
 | 2    | 1    | 0    |
 | 3    | 1    | 1    |
 
-![SPI时序](http://o85gvbiad.bkt.clouddn.com/20161225-spi-bus-timing.jpg)
+![SPI时序](https://airbird-1252162485.cos.ap-shanghai.myqcloud.com/20161225-spi-bus-timing.jpg)
 
 ## 基于Verilog的IP核实现
 
@@ -54,7 +54,7 @@ SPI(Serial Peripheral Interface)，中文为串行外设接口。是一种由摩
 
 根据其时序图，我决定使用状态机来进行实现，将其分为四个状态。大致上如下图所示（以传输1个Byte数据为例）。
 
-![SPI时序状态机](http://o85gvbiad.bkt.clouddn.com/20161225-spi-state.png)
+![SPI时序状态机](https://airbird-1252162485.cos.ap-shanghai.myqcloud.com/20161225-spi-state.png)
 （该图中clk_in为模块的输入时钟，SCLK的频率为clk_in的一半。）
 
 * IDLE：表示空闲状态，此时SCLK无效，CS也无效。
@@ -86,5 +86,5 @@ SPI(Serial Peripheral Interface)，中文为串行外设接口。是一种由摩
 | O_rx_data   | 由配置决定 | 输出     | SPI的接收数据                     |
 | O_rx_dval   | 1          | 输出     | SPI接收数据的数据有效信号，高有效 |
 
-下面直接给出代码的下载链接[[点此](http://o85gvbiad.bkt.clouddn.com/20161225-file-spi-ipcore.zip)]好了，其中三线制下模式0已经经过验证，其它各种情况还未进行验证，后续验证后将更新文件。
+下面直接给出代码的下载链接[[点此](https://airbird-1252162485.cos.ap-shanghai.myqcloud.com/20161225-file-spi-ipcore.zip)]好了，其中三线制下模式0已经经过验证，其它各种情况还未进行验证，后续验证后将更新文件。
 

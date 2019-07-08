@@ -47,11 +47,11 @@ PCB的传输线主要有两种：**微带线**（Microstrip）与**带状线**�
 **PCB传输线说明**
 在很多的资料中，都提到了PCB传输线的横截面是一种类似梯形的结构（其形成的原因是PCB制版的过程是从上向下腐蚀形成的，因此横截面呈现梯形）。
 
-![PCB传输线横截面](http://o85gvbiad.bkt.clouddn.com/20160601-pcb-eimpedace-ctrl-Fig1.png)
+![PCB传输线横截面](https://airbird-1252162485.cos.ap-shanghai.myqcloud.com/20160601-pcb-eimpedace-ctrl-Fig1.png)
 
 如上图所示，其中为工程软件绘制中设置的线宽，W1为横切面上边缘长度，其计算方法为`W1 = W - A`，其中有关于变量A，存在如下的一个查找变关系。
 
-![变量A的查找表](http://o85gvbiad.bkt.clouddn.com/20160601-pcb-eimpedace-ctrl-Fig2.png)
+![变量A的查找表](https://airbird-1252162485.cos.ap-shanghai.myqcloud.com/20160601-pcb-eimpedace-ctrl-Fig2.png)
 
 其中`H OZ`，`1 OZ`表示PCB铜箔的厚度单位，1 OZ（盎司）的厚度大约在1.35(1.4)mil，H OZ表示半(Half)盎司，即0.5 OZ。
 

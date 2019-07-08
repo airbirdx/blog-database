@@ -29,28 +29,28 @@ Altera官方推出NIOS已经很久了，个人感觉C+V代码配合会是后面F
 这里和普通的硬件Quartus工程建立没有什么区别，在这里就不多说，简要提过。
 
 1. 建立Quartus工程，分配好各部分所在文件夹（这是个人习惯，现在我一般的框架如下图）
-	![文件框架](http://o85gvbiad.bkt.clouddn.com/20160626-folder-struct.png)
+	![文件框架](https://airbird-1252162485.cos.ap-shanghai.myqcloud.com/20160626-folder-struct.png)
 	其中`ipcore`用来存放自创建的官方IP核，`tcl`用于存放tcl引脚文件，`verilog`用于存放个人编写的V代码。
 
 2. 创建对应的PLL，这里是否创建PLL自行决定，因为我们要用到板上资源SDRAM，其需要100MHz的时钟，而我们的输入是50MHz，所以此处需要一个PLL。
 
 3. 建立完PLL后，我们建立Qsys。Qsys就是之前版本中的SOPC Builder，其主要就是创建一个虚拟SOPC出来。Tools->Qsys可以打开，打开后我们可以看到如下界面。
-	![Qsys初始界面](http://o85gvbiad.bkt.clouddn.com/20160626-qsys-initial.png)
+	![Qsys初始界面](https://airbird-1252162485.cos.ap-shanghai.myqcloud.com/20160626-qsys-initial.png)
 
 4. 依次添加NIOS、SYSID、SDRAM、EPCS、JTAG、添加后进行改名连线。改名方法为选中NAME后按“2”或者“R”即可，我一般会将这几部分的名字全部改为大写。其中可能会有部分Warning或者Error出现，下面对一些需要注意的点进行了说明。
 	* 下图为添加所有部件后的示意图
-	![Qsys添加后示意图](http://o85gvbiad.bkt.clouddn.com/20160626-qsys-all.png)
+	![Qsys添加后示意图](https://airbird-1252162485.cos.ap-shanghai.myqcloud.com/20160626-qsys-all.png)
 	* 按照一定的规则连线后，可以参考下图形式连线，下方仍然发现了部分如下Error的存在。
-	![Qsys参考连线图](http://o85gvbiad.bkt.clouddn.com/20160626-qsys-linked-all.png)
-	![Qsys-Error](http://o85gvbiad.bkt.clouddn.com/20160626-qsys-error.png)
+	![Qsys参考连线图](https://airbird-1252162485.cos.ap-shanghai.myqcloud.com/20160626-qsys-linked-all.png)
+	![Qsys-Error](https://airbird-1252162485.cos.ap-shanghai.myqcloud.com/20160626-qsys-error.png)
 	* 这里就需要对NIOS核进行一定的设置，双击打来NIOS核，进行如下的设置。设置完成后就可以看到Error消失了。
-	![NIOS核配置](http://o85gvbiad.bkt.clouddn.com/20160626-qsys-nios.png)
+	![NIOS核配置](https://airbird-1252162485.cos.ap-shanghai.myqcloud.com/20160626-qsys-nios.png)
 	* 当然这时下方还会出现一些有关于地址线错误的Warning或者Error，这是由于很多部件的地址占用空间相同了，这在右侧可以看出，类似于如下截图。
-	![](http://o85gvbiad.bkt.clouddn.com/20160626-qsys-error-address.png)
+	![](https://airbird-1252162485.cos.ap-shanghai.myqcloud.com/20160626-qsys-error-address.png)
 	* 这时可以点击System->Assign Base Address进行地址线的自动分配，这里我有一个习惯就是会把EPCS模块的地址线固定为0x0，从上面连线图也可以看出。
 	* 以上完成后要注意我们最后一列的中断IRQ，也要记得将他们连起来。
 	* 之后点击上边标签栏中的Generation进行生成，该页面记得将以下部分勾选。
-	![Qsys-Generation勾选](http://o85gvbiad.bkt.clouddn.com/20160626-qsys-generation-all.png)
+	![Qsys-Generation勾选](https://airbird-1252162485.cos.ap-shanghai.myqcloud.com/20160626-qsys-generation-all.png)
 	* 至此，Qsys中的配置部分结束。
 
 5. 在Quartus顶层中添加PLL和Qsys，参考资料上多用原理图的形式进行连接，我一般是使用代码的方式进行连接，这部分就看个人喜好了。使用代码连接可移植性好些但是没有原理图形式直观。
@@ -69,7 +69,7 @@ Altera官方推出NIOS已经很久了，个人感觉C+V代码配合会是后面F
 6. 编译完成后，打开Run-Configuation，进行下载配置，Apply，Run
 7. 最后就可以等待调试框中的结果了
 8. 最后放上成功的结果
-	![HelloNios](http://o85gvbiad.bkt.clouddn.com/20160626-nios-hellonios.png)
+	![HelloNios](https://airbird-1252162485.cos.ap-shanghai.myqcloud.com/20160626-nios-hellonios.png)
 
 
 

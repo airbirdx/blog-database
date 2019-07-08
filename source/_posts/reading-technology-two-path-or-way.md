@@ -66,7 +66,7 @@ tags:
 当然，技术书籍也大体如此。
 
 我们回过头来再看一下，各个学习资料之间的层次结构。
-![金字塔结构](http://o85gvbiad.bkt.clouddn.com/20161227-learn-doc-hierarchy.png)
+![金字塔结构](https://airbird-1252162485.cos.ap-shanghai.myqcloud.com/20161227-learn-doc-hierarchy.png)
 
 每当我们接触一项新的技术的时候，我们都要把手头的资料按照类似的这样一个金字塔结构进行分类。如果我们阅读了一些技术博客和技术书籍，那么也要清楚地知道它们涉及到的是金字塔中的哪些部分。
 

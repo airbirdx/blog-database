@@ -22,16 +22,16 @@ tags:
 ### 流程图
 下图展示了在Capture中PDF生成的流程，其中的Postscript driver就是上文中的FreePDF，Postscript2PDF converter就是上文中的Ghostscript。
 
-![PDF生成流程](http://o85gvbiad.bkt.clouddn.com/20170104-capture-generate-pdf.png)
+![PDF生成流程](https://airbird-1252162485.cos.ap-shanghai.myqcloud.com/20170104-capture-generate-pdf.png)
 
 ### 操作步骤
 
 1. 在打开的Capture工程窗口，点击菜单栏Accessories -> Cadence Tcl/Tk Utilities -> Utilities，进入一个Application窗口后选择[Design Utilities]选项下的PDF Export后，电子右侧的[Launch]按钮启动。如下图中所示。
-![步骤图1](http://o85gvbiad.bkt.clouddn.com/20170104-capture-pdf-step-01.png)
-![步骤图2](http://o85gvbiad.bkt.clouddn.com/20170104-capture-pdf-step-02.png)
+![步骤图1](https://airbird-1252162485.cos.ap-shanghai.myqcloud.com/20170104-capture-pdf-step-01.png)
+![步骤图2](https://airbird-1252162485.cos.ap-shanghai.myqcloud.com/20170104-capture-pdf-step-02.png)
 
 2. 在PDF Export界面中，如下图所示。
-![步骤图3](http://o85gvbiad.bkt.clouddn.com/20170104-capture-pdf-step-03.png)
+![步骤图3](https://airbird-1252162485.cos.ap-shanghai.myqcloud.com/20170104-capture-pdf-step-03.png)
 	* (1)为输出文件的路径(2)为输出文件的名称，(1)和(2)请按照需求选择更改即可。
 	* (3)处更改为FreePDF
 	* (4)处需要选择Ghostscript选项
@@ -42,8 +42,8 @@ tags:
 3. 点击[OK]，等待生成即可。
 
 4. 打开生成的PDF，即可看到其书签目录等信息，另外PDF文件中的元件还可以点击查看其属性，生成效果见下图所示。
-![步骤图4](http://o85gvbiad.bkt.clouddn.com/20170104-capture-pdf-step-04.png)
-![步骤图5](http://o85gvbiad.bkt.clouddn.com/20170104-capture-pdf-step-05.png)
+![步骤图4](https://airbird-1252162485.cos.ap-shanghai.myqcloud.com/20170104-capture-pdf-step-04.png)
+![步骤图5](https://airbird-1252162485.cos.ap-shanghai.myqcloud.com/20170104-capture-pdf-step-05.png)
 
 ### 进一步改进
 上述步骤2中讲到了需要更改FreeFDP和将{}内的`gswin32c.exe`更改为`C:\Program Files\gs\gs9.19\bin\gswin64c.exe`，为了减少后续每次生成时的改动，我们可以直接改动默认的相关文本文件，使得点击选项后为正确的路径文件。
@@ -52,19 +52,19 @@ tags:
 `D:\Cadence\SPB_16.6\tools\capture\tclscripts\capUtils`。文件为`capPdfUtil.tcl`。
 
 1. 将`gswin32c.exe`更改为正确路径
-![步骤图6](http://o85gvbiad.bkt.clouddn.com/20170104-capture-pdf-step-06.png)
+![步骤图6](https://airbird-1252162485.cos.ap-shanghai.myqcloud.com/20170104-capture-pdf-step-06.png)
 更改为
-![步骤图7](http://o85gvbiad.bkt.clouddn.com/20170104-capture-pdf-step-07.png)
+![步骤图7](https://airbird-1252162485.cos.ap-shanghai.myqcloud.com/20170104-capture-pdf-step-07.png)
 
 2. 将PS默认为FreePDF
-![步骤图8](http://o85gvbiad.bkt.clouddn.com/20170104-capture-pdf-step-08.png)
+![步骤图8](https://airbird-1252162485.cos.ap-shanghai.myqcloud.com/20170104-capture-pdf-step-08.png)
 更改为
-![步骤图9](http://o85gvbiad.bkt.clouddn.com/20170104-capture-pdf-step-09.png)
+![步骤图9](https://airbird-1252162485.cos.ap-shanghai.myqcloud.com/20170104-capture-pdf-step-09.png)
 
 3. 保存后，再次打开PDF Export，就可以见到默认已经变为了我们所更改的参数。
 
 ## 参考文章
-[1] [FlowCAD_AN_Capture_PDF_Export.PDF](http://o85gvbiad.bkt.clouddn.com/FlowCAD_AN_Capture_PDF_Export.pdf)
-[2] [OrCAD_Capture_TclTk_Extensions.PDF](http://o85gvbiad.bkt.clouddn.com/OrCAD_Capture_TclTk_Extensions.pdf)
+[1] [FlowCAD_AN_Capture_PDF_Export.PDF](https://airbird-1252162485.cos.ap-shanghai.myqcloud.com/FlowCAD_AN_Capture_PDF_Export.pdf)
+[2] [OrCAD_Capture_TclTk_Extensions.PDF](https://airbird-1252162485.cos.ap-shanghai.myqcloud.com/OrCAD_Capture_TclTk_Extensions.pdf)
 
 注：本文系参考[1]的翻译文，根据自己风格进行适当调整，在此对原文表示感谢。[2]文可以安装Everything进行硬盘搜索，安装Cadence时已经自行安装在硬盘上了。

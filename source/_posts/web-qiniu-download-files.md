@@ -30,7 +30,7 @@ tags:
 
 配置账户信息，其中AK与SK可以在七牛网[个人中心章节](https://portal.qiniu.com/user/key)中找到。
 
-![七牛网个人中心](http://o85gvbiad.bkt.clouddn.com/20180423-qiniu-account-key.png)
+![七牛网个人中心](https://airbird-1252162485.cos.ap-shanghai.myqcloud.com/20180423-qiniu-account-key.png)
 
 设置完成后可以键入
 
@@ -76,7 +76,7 @@ tags:
 
 进行所有存储空间中后缀为".png"文件的下载，10为下载线程数。
 
-![qdownload](http://o85gvbiad.bkt.clouddn.com/20180423-qiniu-qdownload.png)
+![qdownload](https://airbird-1252162485.cos.ap-shanghai.myqcloud.com/20180423-qiniu-qdownload.png)
 
 另，qdownload指令的具体参数及定义描述如下所示。
 

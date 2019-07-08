@@ -27,9 +27,9 @@ tags:
 
 在Python安装完成后使用`Everything`搜索`pip.exe`，然后选择打开其文件路径，可以看到几种的工具。
 
-![Everything搜索](http://o85gvbiad.bkt.clouddn.com/20180503-sw-python-everything-search-pip.png)
+![Everything搜索](https://airbird-1252162485.cos.ap-shanghai.myqcloud.com/20180503-sw-python-everything-search-pip.png)
 
-![安装工具/脚本](http://o85gvbiad.bkt.clouddn.com/20180503-sw-python-install-script.png)
+![安装工具/脚本](https://airbird-1252162485.cos.ap-shanghai.myqcloud.com/20180503-sw-python-install-script.png)
 
 右键打开`PowerShell`工具，在其中键入
 
@@ -39,4 +39,4 @@ tags:
 
 之后回车等待即可，当进度条100%后，第三方Pillow库安装完成。
 
-![使用PIP安装Pillow](http://o85gvbiad.bkt.clouddn.com/20180503-sw-python-pip-pillow.png)
+![使用PIP安装Pillow](https://airbird-1252162485.cos.ap-shanghai.myqcloud.com/20180503-sw-python-pip-pillow.png)

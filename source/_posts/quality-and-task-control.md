@@ -30,9 +30,9 @@ FMEA**提供一个机会**但它不能解决问题。
 * MFEMA：机器FEMA，解决设备控制状态满足工艺控制参数的问题。
 
 有关于FEMA的定位和逻辑思路，个人感觉有两副图讲得比较好，摘抄如下。
-![FEMA定位](http://o85gvbiad.bkt.clouddn.com/20170227-quality-control-fema-positioning.png)
+![FEMA定位](https://airbird-1252162485.cos.ap-shanghai.myqcloud.com/20170227-quality-control-fema-positioning.png)
 
-![FEMA逻辑思路](http://o85gvbiad.bkt.clouddn.com/20170227-quality-control-fema-logic.png)
+![FEMA逻辑思路](https://airbird-1252162485.cos.ap-shanghai.myqcloud.com/20170227-quality-control-fema-logic.png)
 
 *题外闲话——FEMA历史*
 

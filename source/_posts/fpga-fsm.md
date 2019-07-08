@@ -33,7 +33,7 @@ A **finite-state machine (FSM)** or **finite-state automaton** (plural: automata
 
 时钟同步的Moore状态机结构如下图所示，从图中可以看出其输出逻辑G的输出仅由当前状态决定。
 
-![时钟同步的Moore状态机结构](http://o85gvbiad.bkt.clouddn.com/20170917-fpga-fsm-moore-introduction.png)
+![时钟同步的Moore状态机结构](https://airbird-1252162485.cos.ap-shanghai.myqcloud.com/20170917-fpga-fsm-moore-introduction.png)
 
 ### Mealy状态机
 
@@ -41,7 +41,7 @@ A **finite-state machine (FSM)** or **finite-state automaton** (plural: automata
 
 时钟同步的Mealy状态机结构如下图所示，从图中可以看出其输出逻辑G的输出由输入和当前状态一同决定。
 
-![时钟同步的Mealy状态机结构](http://o85gvbiad.bkt.clouddn.com/20170917-fpga-fsm-mealy-introduction.png)
+![时钟同步的Mealy状态机结构](https://airbird-1252162485.cos.ap-shanghai.myqcloud.com/20170917-fpga-fsm-mealy-introduction.png)
 
 ### Moore vs Mealy 状态机
 1. Mealy机比Moore机“响应”速度快。
@@ -58,7 +58,7 @@ A **finite-state machine (FSM)** or **finite-state automaton** (plural: automata
 
 对于给定的时序逻辑功能，可以用Mealy机实现，也可以用Moore机实现。根据Moore机比Mealy机输出落后一个周期的特性，可以实现两种状态机之间的转换。把Moore机转换为Mealy机的办法为，把次态的输出修改为对应现态的输出，同时合并一些具有等价性能的状态。把Mealy机转换为Moore机的办法是，把当前态的输出修改为对应次态的输出，同时添加一些状态。如下图所示，为把Mealy机状态图转化为Moore机状态图。
 
-![Mealy型机转换为Moore型机](http://o85gvbiad.bkt.clouddn.com/20170917-fpga-fsm-mealy-moore-translation.png)
+![Mealy型机转换为Moore型机](https://airbird-1252162485.cos.ap-shanghai.myqcloud.com/20170917-fpga-fsm-mealy-moore-translation.png)
 
 如上图所示，把Mealy型机转换为Moore型机，只要把现时输出改变为下一时刻输出。对于状态A，有4个箭头指向它，表示在当前状态下有4个状态可以转换为下一状态的A；同时当前输出均为0，可以把0移入状态A内部，表示在Moore机中状态A的输出为0。同理，可以把0分别移位B/C状态。但对于状态D，有两个箭头指向且具有不同的输出值，需要把状态D分解成两个状态D1和D2（每个状态对应一个输出，当输出不同需要利用不同的状态表示，这即是Moore机具有更多状态的原因），得到完整的Moore机状态模型。
 
@@ -78,7 +78,7 @@ Mealy机和Moore机实现的电路是同步时序逻辑电路的两种不同形�
 
 #### A-普通型
 
-![三段式状态机-A](http://o85gvbiad.bkt.clouddn.com/20170917-fpga-fsm-moore-3-part-standard-a.png)
+![三段式状态机-A](https://airbird-1252162485.cos.ap-shanghai.myqcloud.com/20170917-fpga-fsm-moore-3-part-standard-a.png)
 
 ```verilog
 // 第一个always块，描述当前状态的状态寄存器，non-blocking
@@ -126,7 +126,7 @@ end
 ```
 #### B-改良型
 
-![三段式状态机-B](http://o85gvbiad.bkt.clouddn.com/20170917-fpga-fsm-moore-3-part-standard-b.png)
+![三段式状态机-B](https://airbird-1252162485.cos.ap-shanghai.myqcloud.com/20170917-fpga-fsm-moore-3-part-standard-b.png)
 
 ```verilog
 // 第三个always块，时序逻辑描述输出，non-blocking
@@ -152,7 +152,7 @@ end
 
 #### C-改良型
 
-![三段式状态机-C](http://o85gvbiad.bkt.clouddn.com/20170917-fpga-fsm-moore-3-part-standard-c.png)
+![三段式状态机-C](https://airbird-1252162485.cos.ap-shanghai.myqcloud.com/20170917-fpga-fsm-moore-3-part-standard-c.png)
 
 ```verilog
 // 第三个always块，时序逻辑描述输出，non-blocking

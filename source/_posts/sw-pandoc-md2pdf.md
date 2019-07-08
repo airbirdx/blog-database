@@ -77,19 +77,19 @@ pandoc -N -s --toc --smart --latex-engine=xelatex -V CJKmainfont='黑体' -V mai
 
 ## 转换效果 ##
 
-本文也对一些.md文件进行了PDF文件转换，并附一些效果图于后供大家参考。其中使用的input.md文件使用了[Cmd Markdown简明说明书](https://www.zybuluo.com/mdeditor?url=https://www.zybuluo.com/static/editor/md-help.markdown#)的源文件，其网页渲染效果[点此可见](https://www.zybuluo.com/ghosert/note/2)，可以与生成的PDF进行一个对比，看PDF生成的效果如何。本文使用的input.md也放出[下载链接](http://o85gvbiad.bkt.clouddn.com/20160608-pandoc-md2pdf-input.md)，
+本文也对一些.md文件进行了PDF文件转换，并附一些效果图于后供大家参考。其中使用的input.md文件使用了[Cmd Markdown简明说明书](https://www.zybuluo.com/mdeditor?url=https://www.zybuluo.com/static/editor/md-help.markdown#)的源文件，其网页渲染效果[点此可见](https://www.zybuluo.com/ghosert/note/2)，可以与生成的PDF进行一个对比，看PDF生成的效果如何。本文使用的input.md也放出[下载链接](https://airbird-1252162485.cos.ap-shanghai.myqcloud.com/20160608-pandoc-md2pdf-input.md)，
 
-![Page1](http://o85gvbiad.bkt.clouddn.com/20160608-pandoc-md2pdf-output_01.png)
+![Page1](https://airbird-1252162485.cos.ap-shanghai.myqcloud.com/20160608-pandoc-md2pdf-output_01.png)
 
-![Page2](http://o85gvbiad.bkt.clouddn.com/20160608-pandoc-md2pdf-output_02.png)
+![Page2](https://airbird-1252162485.cos.ap-shanghai.myqcloud.com/20160608-pandoc-md2pdf-output_02.png)
 
-![Page3](http://o85gvbiad.bkt.clouddn.com/20160608-pandoc-md2pdf-output_03.png)
+![Page3](https://airbird-1252162485.cos.ap-shanghai.myqcloud.com/20160608-pandoc-md2pdf-output_03.png)
 
-![Page4](http://o85gvbiad.bkt.clouddn.com/20160608-pandoc-md2pdf-output_04.png)
+![Page4](https://airbird-1252162485.cos.ap-shanghai.myqcloud.com/20160608-pandoc-md2pdf-output_04.png)
 
-![Page5](http://o85gvbiad.bkt.clouddn.com/20160608-pandoc-md2pdf-output_05.png)
+![Page5](https://airbird-1252162485.cos.ap-shanghai.myqcloud.com/20160608-pandoc-md2pdf-output_05.png)
 
-![Page6](http://o85gvbiad.bkt.clouddn.com/20160608-pandoc-md2pdf-output_06.png)
+![Page6](https://airbird-1252162485.cos.ap-shanghai.myqcloud.com/20160608-pandoc-md2pdf-output_06.png)
 
-![Page7](http://o85gvbiad.bkt.clouddn.com/20160608-pandoc-md2pdf-output_07.png)
+![Page7](https://airbird-1252162485.cos.ap-shanghai.myqcloud.com/20160608-pandoc-md2pdf-output_07.png)
 

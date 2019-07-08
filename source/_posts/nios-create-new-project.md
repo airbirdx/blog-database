@@ -15,32 +15,32 @@ tags:
 
 1. 在开始菜单中选中NIOS程序，然后单击打开。
 
-![1](http://o85gvbiad.bkt.clouddn.com/20180606-nios-config-bsp-editor.png)
+![1](https://airbird-1252162485.cos.ap-shanghai.myqcloud.com/20180606-nios-config-bsp-editor.png)
 
 2. 自定义配置好路径，在这里我配置为桌面上的SW文件夹。
 
-![2](http://o85gvbiad.bkt.clouddn.com/20180606-nios-config-prj-a.png)
+![2](https://airbird-1252162485.cos.ap-shanghai.myqcloud.com/20180606-nios-config-prj-a.png)
 
 ## 创建Hello例程
 
 1. 点击`File->New->Nios II App.. and BSP from ..`创建一个新的工程。
 
-![3](http://o85gvbiad.bkt.clouddn.com/20180606-nios-config-prj-b.png)
+![3](https://airbird-1252162485.cos.ap-shanghai.myqcloud.com/20180606-nios-config-prj-b.png)
 
 2. 选择SOPC文件路径，此文件位于Quartus工程中MIOS IP核文件夹下。
 
-	[4](http://o85gvbiad.bkt.clouddn.com/20180606-nios-config-prj-properties	.png)
+	[4](https://airbird-1252162485.cos.ap-shanghai.myqcloud.com/20180606-nios-config-prj-properties	.png)
 
 3. 输入工程文件名，本文中键入`BDM`为例。
 4. 注意不勾选`Use default location`选项，点击右侧`...`按钮选择合适的路径，这样做的目的是将Quartus和NIOS的工程分开管理。
 5. 在下方选择`Hello World`默认工程后，点击`Next`进入下一个页面。
 6. 保持默认信息即可，确认无误后点击`Finish`完成此部分操作。
 
-![5](http://o85gvbiad.bkt.clouddn.com/20180606-nios-config-properties-path-a.png)
+![5](https://airbird-1252162485.cos.ap-shanghai.myqcloud.com/20180606-nios-config-properties-path-a.png)
 
 7. 完成后的界面可以看到左侧有了相关的信息，然后双击`hello_world.c`可以在中心区域看到代码部分。
 
-![6](http://o85gvbiad.bkt.clouddn.com/20180606-nios-config-properties-path-b.png)
+![6](https://airbird-1252162485.cos.ap-shanghai.myqcloud.com/20180606-nios-config-properties-path-b.png)
 
 
 ## 补充完善代码
@@ -49,44 +49,44 @@ tags:
 2. 将代码以及头文件准备好，在此约定源文件置于src文件夹中，头文件置于inc文件夹中。
 3. 将两个文件夹拷贝到工程文件夹下，在本实例中为`BDM`文件夹。
 
-![7](http://o85gvbiad.bkt.clouddn.com/20180606-nios-copy-code.png)
+![7](https://airbird-1252162485.cos.ap-shanghai.myqcloud.com/20180606-nios-copy-code.png)
 
 4. 在NIOS软件中左侧栏选择`Refresh`进行刷新。可以看到刚才拷贝的文件夹已经在列表中了。
 
-![8](http://o85gvbiad.bkt.clouddn.com/20180606-nios-delete-hello.png)
+![8](https://airbird-1252162485.cos.ap-shanghai.myqcloud.com/20180606-nios-delete-hello.png)
 
 5. 在工程`BDM`上选中右键`右键->New->Source Folder`，分别添加名为`inc`和`src`的文件夹。
 
-![9](http://o85gvbiad.bkt.clouddn.com/20180606-nios-main-window.png)
+![9](https://airbird-1252162485.cos.ap-shanghai.myqcloud.com/20180606-nios-main-window.png)
 
 7. 如果`src`中有程序包含`main`函数，那么需要删去`hello_world.c`文件。
 
-![10](http://o85gvbiad.bkt.clouddn.com/20180606-nios-new-bsp-prj.png)
+![10](https://airbird-1252162485.cos.ap-shanghai.myqcloud.com/20180606-nios-new-bsp-prj.png)
 
 ## 配置BSP Editor
 
 1. 在左边列表中选择bsp工程，然后`右键->NIOS II->BSP Editor`，打开编辑框。
 
-![11](http://o85gvbiad.bkt.clouddn.com/20180606-nios-new-hardware-app.png)
+![11](https://airbird-1252162485.cos.ap-shanghai.myqcloud.com/20180606-nios-new-hardware-app.png)
 
 2. 根须需要进行选择，从上向下第一个框中的`jtag`或`none`表示是否启用JTAG模式，在调试时启用，运行`Release`版本时选择`none`。勾选`enable_small_c_lib...`的选项，然后将`exception_stack_size`设置为10240。最后点击`Generate`运行生成即可。
 
-![12](http://o85gvbiad.bkt.clouddn.com/20180606-nios-new-src-folder.png)
+![12](https://airbird-1252162485.cos.ap-shanghai.myqcloud.com/20180606-nios-new-src-folder.png)
 
 ## 配置include路径
 
 1. 选择含有`main`函数的C文件打开，在本实例中是`BDM.c`。
 2. 在菜单栏选择`Project->Properties`打开属性配置。
 
-![13](http://o85gvbiad.bkt.clouddn.com/20180606-nios-open-bsp-editor.png)
+![13](https://airbird-1252162485.cos.ap-shanghai.myqcloud.com/20180606-nios-open-bsp-editor.png)
 
 3. 选择`C/C++ General->Paths and ...`，然后在右侧空白区添加工作区或文件系统。主要为两个Workspace和三个inc路径。
 
-![14](http://o85gvbiad.bkt.clouddn.com/20180606-nios-open-sw.png)
+![14](https://airbird-1252162485.cos.ap-shanghai.myqcloud.com/20180606-nios-open-sw.png)
 
 4. 选择`Nios II App...->Nios II App... Paths`，在其中include dir区域添加三个`inc`文件夹的路径。
 
-![15](http://o85gvbiad.bkt.clouddn.com/20180606-nios-refreash-tool.png)
+![15](https://airbird-1252162485.cos.ap-shanghai.myqcloud.com/20180606-nios-refreash-tool.png)
 
 5. 添加完成后点击`OK`完成此部分配置。
 
@@ -99,7 +99,7 @@ tags:
 ##配置并下载 
 1. 在工程上`右键->Run As->Nios II Hardware`或者在快捷栏选择进入下载配置界面。
 
-![16](http://o85gvbiad.bkt.clouddn.com/20180606-nios-set-hardware-app.png)
+![16](https://airbird-1252162485.cos.ap-shanghai.myqcloud.com/20180606-nios-set-hardware-app.png)
 
 2. 选择`Target Connection`子标签界面，然后如果有使用USB-Blaster连接到上电的电路板，点击`Refresh Connection`刷新链接，然后勾选下方的两个`Ignore`按钮，将会看到下方`Run`按钮可以点击，最后点击执行即可。
 

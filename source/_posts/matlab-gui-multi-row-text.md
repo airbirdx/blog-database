@@ -29,4 +29,4 @@ set(h,'String', outstring, 'Position', newpos);
 ## 显示结果 ##
 
 在这里需要**注意**的是，一行中间最好不要有空格，如果有的话，函数会把它分配成两个段落的。
-![Matlab中的静态文本框中显示多行内容](http://o85gvbiad.bkt.clouddn.com/20160610-matlab-gui-multi-row-text.png)
+![Matlab中的静态文本框中显示多行内容](https://airbird-1252162485.cos.ap-shanghai.myqcloud.com/20160610-matlab-gui-multi-row-text.png)

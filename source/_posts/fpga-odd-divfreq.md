@@ -79,7 +79,7 @@ endmodule
 
 之后使用Modelsim仿真得到的结果如下图
 
-![Modelsim仿真](http://o85gvbiad.bkt.clouddn.com/20160601-fpga-odd-divfreq.png)
+![Modelsim仿真](https://airbird-1252162485.cos.ap-shanghai.myqcloud.com/20160601-fpga-odd-divfreq.png)
 
 ## 小结
 

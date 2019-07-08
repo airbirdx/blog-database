@@ -11,7 +11,7 @@ tags:
 今天诳论坛，突然发现了一个有关latch的问题，由于对D Flip-Flop和Latch还有些疑问，就点击了进去，一看果然有些意思，也挺有学习意义的，于是本文就诞生了。喊出口号~Just note it.
 
 ## 有意思的问题图
-![这是个图片，仔细看代码](http://o85gvbiad.bkt.clouddn.com/20160923-fpga-latch-question.png)
+![这是个图片，仔细看代码](https://airbird-1252162485.cos.ap-shanghai.myqcloud.com/20160923-fpga-latch-question.png)
 两个问题。
 * 上面左边描述的电路，如果不加`else q<=0;`，会生成latch吗？
 * 上面右边描述的电路，如果不加`else q<=0;`，会生成latch吗？

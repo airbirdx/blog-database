@@ -23,11 +23,11 @@ Processing->Start->Start Test Bench Template Writer，建立好之后自行进�
 
 Assignments->Setting->EDA Tool Setting。
 
-![图1](http://o85gvbiad.bkt.clouddn.com/20160601-quartus-modelsim-Fig1.png)
+![图1](https://airbird-1252162485.cos.ap-shanghai.myqcloud.com/20160601-quartus-modelsim-Fig1.png)
 
 在下方NativeLink Setting处选择刚才的测试文件。完整填写下图后添加测试工程。
 
-![图2](http://o85gvbiad.bkt.clouddn.com/20160601-quartus-modelsim-Fig2.png)
+![图2](https://airbird-1252162485.cos.ap-shanghai.myqcloud.com/20160601-quartus-modelsim-Fig2.png)
 
 ## 编译执行仿真
 

@@ -53,7 +53,7 @@ tags:
 
 
 
-DEMO脚本中所使用到的一些function有不懂的可百度或谷歌，查看各自的详细描述。脚本在使用时与图片放在一起，然后点击运行，运行期间将会显示当前处理图片，处理完成后将会展示合并图片。合并完成后图片以PNG格式存储于同路径下`splicing_picture.png`文件。DEMO程序的源代码及几个参考文件可[点此进行下载](http://o85gvbiad.bkt.clouddn.com/20180503-sw-python-pillow-pintu.zip)。
+DEMO脚本中所使用到的一些function有不懂的可百度或谷歌，查看各自的详细描述。脚本在使用时与图片放在一起，然后点击运行，运行期间将会显示当前处理图片，处理完成后将会展示合并图片。合并完成后图片以PNG格式存储于同路径下`splicing_picture.png`文件。DEMO程序的源代码及几个参考文件可[点此进行下载](https://airbird-1252162485.cos.ap-shanghai.myqcloud.com/20180503-sw-python-pillow-pintu.zip)。
 
 ```python
 #####################################################
@@ -134,4 +134,4 @@ dest_im.show()        # finish
 
 30张照片按照4×8的排布方式，图片拼合后效果图如下所示。个人对这样的结果还是相当满意的，也可以调整成5×6的排布方式，只需更改`row`与`col`的参数设定后重新运行即可。
 
-![30张照片拼图](http://o85gvbiad.bkt.clouddn.com/20180503-sw-python-pillow-pintu.png)
+![30张照片拼图](https://airbird-1252162485.cos.ap-shanghai.myqcloud.com/20180503-sw-python-pillow-pintu.png)

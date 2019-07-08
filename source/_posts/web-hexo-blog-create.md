@@ -42,7 +42,7 @@ Git软件是一个分布式版本控制工具，但是我们在此仅仅用到�
 
 有人选择在软件安装中如下界面处将选项设置为**Use Git from Windows CMD prompt**，这里主要是为了在windows的CMD下对Git进行些设置（因为默认是只能在Git Bash中执行的）。但是仍然有些操作只能在Git Bash下运行，但是选择这个确实更加方便一些。其他地方一路默认即可（同上，安装路径自定义）。
 
-![Git安装](http://o85gvbiad.bkt.clouddn.com/20160607-hexo-blog-created-git-setup.png)
+![Git安装](https://airbird-1252162485.cos.ap-shanghai.myqcloud.com/20160607-hexo-blog-created-git-setup.png)
 
 在按照上述的安装后我们一样打开CMD来运行一条指令来看下Git的版本号。
 ```
@@ -113,7 +113,7 @@ hexo s --debug
 ```
 来查看调试的详细模式，会有每个改动信息提示。
 
-![HEXO初始界面](http://o85gvbiad.bkt.clouddn.com/20160607-hexo-blog-created-localhost.png)
+![HEXO初始界面](https://airbird-1252162485.cos.ap-shanghai.myqcloud.com/20160607-hexo-blog-created-localhost.png)
 
 ***可能的错误及解决办法***：本部分参考了文章[localhost:4000不能访问](http://blog.csdn.net/u012246342/article/details/51543370)。
 
@@ -130,17 +130,17 @@ hexo s -p 5000	# 启动服务器，查看本地效果，端口号5000
 
 这里需要一个GitHub账号，没有的请进入[GitHub官网](https://GitHub.com/)自行申请，这里不多描述申请。在有了一个账号之后，进行网站代码库的部署。首先新建一个知识库，在右上角找到**+号**，然后选择**New repository**，进入代码库创建页面。如下图。
 
-![New repository](http://o85gvbiad.bkt.clouddn.com/20160607-hexo-blog-created-github.png)
+![New repository](https://airbird-1252162485.cos.ap-shanghai.myqcloud.com/20160607-hexo-blog-created-github.png)
 
 在**Repository name**那里填写**yourname.GitHub.io**。注意此处的**yourname**为你的GitHub账户名，格式必须按照上文中所说的来。**Description**部分选填，空间类型选择**Public**，然后点击**Create repository***进行创建，创建完成后将会看到这样的一个空间。
 
-![Repository](http://o85gvbiad.bkt.clouddn.com/20160607-hexo-blog-created-github-new.png)
+![Repository](https://airbird-1252162485.cos.ap-shanghai.myqcloud.com/20160607-hexo-blog-created-github-new.png)
 
 然后我们点击界面中的Setting，就是那个小齿轮，向下拖动，看到**GitHub Pages**部分，点击**Automatic page generator**，然后一路向下，系统会自行的给你创建一个网页，稍微等待一会儿，就可以发现**yourname.GitHub.io**这个网址已经可以打开了。
 
 后续帮同学设置时发现**Auto**的选项消失了，如下图
 
-![Choose a theme](http://o85gvbiad.bkt.clouddn.com/20180416-hexo-blog-created-github-gpages-info.png)
+![Choose a theme](https://airbird-1252162485.cos.ap-shanghai.myqcloud.com/20180416-hexo-blog-created-github-gpages-info.png)
 
 点击**Choose a theme**，进入选择页面，然后点击**Select theme**，在新的页面再点击**Commit Change**自动提交至GitHub Repository就完成了**GitHub Pages**的创建了。至此，GitHub网站部署完成。
 
@@ -150,7 +150,7 @@ hexo s -p 5000	# 启动服务器，查看本地效果，端口号5000
 
 之后在Coding上创建一个项目，**项目名称最好与你的账户名称一致**，这样后续操作起来会比较方便，不容易发晕与出错。
 
-![New Project](http://o85gvbiad.bkt.clouddn.com/20170209-coding-new-project.png)
+![New Project](https://airbird-1252162485.cos.ap-shanghai.myqcloud.com/20170209-coding-new-project.png)
 
 和GitHub有些不同，Coding的Pages服务我们等后续Git部署完成了后再进行，在完成以上的创建后我们留先进入下一个阶段。
 
@@ -264,7 +264,7 @@ www.airbird.info
 
 在你的域名解析商处添加解析信息，添加这样的两条解析内容。只需要将你的记录值按照你自己的更改为**yourname.github.io**和**yourname.coding.me**即可。
 
-![域名解析](http://o85gvbiad.bkt.clouddn.com/20170209-dnspod-new-setting.png)
+![域名解析](https://airbird-1252162485.cos.ap-shanghai.myqcloud.com/20170209-dnspod-new-setting.png)
 
 这里我使用的解析服务是DNSPod，这里因人而异，你的可能是域名购买商本身的解析服务也可能是别的地方的解析服务，不过更改的办法都是大同小异。解析更改到开始运行都有着一定的等待刷新时间，还请耐心等待。不过我使用DNSPod来看，还是很快的，不一会就可以通过自有域名进入到你的博客了。
 
