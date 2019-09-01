@@ -1,18 +1,18 @@
 ---
-title: 原创 | Matlab生成随机数
+title: 原创 | Matlab 生成随机数
 date: 2016-11-10 11:42:34
 categories:
   - Matlab
 tags:
   - Matlab
 ---
-Matlab中有着丰富的随机数生成函数以应用于不同的情景，我一般使用生成随机的1~N的整数，但是之前了解的只有**rand**函数，其生成主要为0~1之间的随机数，但是和所预想的有差异。在此进行进行了help指令，之后了解到了**randi**函数，并初步学会使用，在此做一个记录。
+Matlab 中有着丰富的随机数生成函数以应用于不同的情景，我一般使用生成随机的 1~N 的整数，但是之前了解的只有 **rand** 函数，其生成主要为 0 ~ 1 之间的随机数，但是和所预想的有差异。在此进行进行了help 指令，之后了解到了 **randi** 函数，并初步学会使用，在此做一个记录。
 
 <!--more-->
 
-## rand函数
+## rand 函数
 
-rand函数是生产0~1的随机数，rand(N)为生产一个N行N列的随机数矩阵，rand(M,N)为生成一个M行N列的随机数矩阵。以下为一些示例。
+rand 函数是生产 0 ~ 1 的随机数，rand(N) 为生产一个 N 行 N 列的随机数矩阵，rand(M, N) 为生成一个 M 行 N 列的随机数矩阵。以下为一些示例。
 
 	>> rand(3)
 	
@@ -29,7 +29,7 @@ rand函数是生产0~1的随机数，rand(N)为生产一个N行N列的随机数�
 	    0.9649    0.9706    0.4854
 	    0.1576    0.9572    0.8003
 
-在help rand后，我们可以观察其解释说明。
+在 help rand 后，我们可以观察其解释说明。
 
 	>> help rand
 	 rand Uniformly distributed pseudorandom numbers.
@@ -49,14 +49,14 @@ rand函数是生产0~1的随机数，rand(N)为生产一个N行N列的随机数�
 	    the uniform random number generator that underlies rand, RANDI, and RANDN.
 	    Control that shared random number generator using RNG.
 
-通过最后其提示的See also,我们可以观看其他和随机数有关的函数，看有没有合适的函数。
+通过最后其提示的 See also, 我们可以观看其他和随机数有关的函数，看有没有合适的函数。
 
 	    See also randi, randn, rng, RandStream, RandStream/rand,
 	             sprand, sprandn, randperm.
 
-## randi函数
+## randi 函数
 
-产生1~NUM的随机整数，NUM可调整。其中NUM作为一个输入的参数。randi(MAX, N)产生一个最大值为MAX的N行N列的整数矩阵，randi(MAX, M, N)产生一个最大值为MAX的M行N列的整数矩阵。以下为一些示例。
+产生 1 ~ NUM 的随机整数，NUM 可调整。其中 NUM 作为一个输入的参数。randi(MAX, N) 产生一个最大值为 MAX 的 N 行 N 列的整数矩阵，randi(MAX, M, N) 产生一个最大值为 MAX 的 M 行 N 列的整数矩阵。以下为一些示例。
 
 	>> randi(5, 6)
 	
@@ -77,7 +77,7 @@ rand函数是生产0~1的随机数，rand(N)为生产一个N行N列的随机数�
 	     4     1     4     4     3     3     4     3     5
 	     1     2     1     3     2     5     2     2     3
 
-在help randi后，我们可以观察其解释说明。
+在 help randi 后，我们可以观察其解释说明。
 
 	>> help randi
 	 randi Pseudorandom integers from a uniform discrete distribution.

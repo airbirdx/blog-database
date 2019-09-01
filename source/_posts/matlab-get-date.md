@@ -1,5 +1,5 @@
 ---
-title: 原创 | Matlab获取当前时间信息
+title: 原创 | Matlab 获取当前时间信息
 date: 2016-11-10 10:47:34
 categories:
   - Matlab
@@ -9,10 +9,10 @@ tags:
 
 本文主要介绍下Matlab中如何获取当前时间的一些方法。
 
-## 基本变量date、now、clock
-1. date	按照**日期字符串**返回当前系统时间
-2. now	按照**连续的日期数值**返回当前系统时间
-3. clock按照**日期向量格式**返回当前系统时间
+## 基本变量 date、now、clock
+1. date	 按照**日期字符串**返回当前系统时间
+2. now	 按照**连续的日期数值**返回当前系统时间
+3. clock 按照**日期向量格式**返回当前系统时间
 
 <!--more-->
 
@@ -34,9 +34,9 @@ tags:
 	
 	    2.0160    0.0050    0.0150    0.0170    0.0100    0.0195
 
-## 使用year、month、day等函数获取
+## 使用 year、month、day 等函数获取
 
-可以使用的获取函数有year,month,day,hour,minute,second，其作用是从第一部分讲到的字符串和连续型日期时间个时钟提取信息。
+可以使用的获取函数有 year, month, day, hour, minute, second，其作用是从第一部分讲到的字符串和连续型日期时间个时钟提取信息。
 
 	>> [year(date), year(now)]
 	
@@ -52,7 +52,7 @@ tags:
 	
 	     5     0     0     0     0     0
 
-## 其他函数datestr等
+## 其他函数 datestr 等
 
 还有一些日期转字符串的函数，比如datestr。
 
@@ -72,7 +72,7 @@ tags:
 	
 	15-May-2016 17:20:03
 
-有关于datestr函数和其他相关类似的函数，可以通过`help datestr`或者`doc datestr`进行访问查看。以下为**摘取部分（有删减）**。
+有关于 datestr 函数和其他相关类似的函数，可以通过 `help datestr` 或者 `doc datestr` 进行访问查看。以下为**摘取部分（有删减）**。
 
 	>> help datestr
 	 datestr String representation of date.

@@ -1,5 +1,5 @@
 ---
-title: 原创 | 利用bat脚本进行QuartusII和NiosII程序的下载
+title: 原创 | 利用 bat 脚本进行 QuartusII 和 NiosII 程序的下载
 date: 2017-06-25 21:21:28
 
 categories:
@@ -9,24 +9,24 @@ tags:
   - Nios
 ---
 
-本文主要介绍了一种使用bat批处理调用脚本对Altera系列FPGA外挂EPCS芯片进行SOF（QuartusII）和ELF(NiosII)程序的下载方法。
+本文主要介绍了一种使用 bat 批处理调用脚本对 Altera 系列 FPGA 外挂 EPCS 芯片进行 SOF（QuartusII）和 ELF(NiosII) 程序的下载方法。
 
 <!--more-->
 
 ## 事出必有因
 
-当前固件程序存在NIOS软核部分，所以在调试测试以及生产的时候经常需要同时打开QuartusII和NiosII进行程序的更替下载，操作繁琐费时，于是就想到使用Quartus中的Command-Line来进行程序的下载。
+当前固件程序存在 NIOS 软核部分，所以在调试测试以及生产的时候经常需要同时打开 QuartusII 和 NiosII 进行程序的更替下载，操作繁琐费时，于是就想到使用 Quartus 中的 Command-Line 来进行程序的下载。
 
 软件环境：QuartusII & NiosII 15.1.0.185。
 
 ## 知其然
 
-完成后的bat在双击后运行如下图所示，有3个选项可供选择。
+完成后的bat在双击后运行如下图所示，有 3 个选项可供选择。
 
 ![下载选项界面](https://airbird-1252162485.cos.ap-shanghai.myqcloud.com/20170626-quartus-bat-download-results.png)
 
 [0] 运行Altera Nios2 Command Shell
-* 选择此项后将会正常进入到Altera Nios2 Command Shell命令行界面
+* 选择此项后将会正常进入到 Altera Nios2 Command Shell 命令行界面
 
 [1] 执行在线下载功能
 * 选择此项后将会进行程序的在线下载（并不会固化），而后进入调试模式运行，可以输出可能有的反馈信息
@@ -36,25 +36,25 @@ tags:
 
 ## 知其所以然
 
-能这么做完全是因为Quartus留出了相应的命令行接口，其实我们所使用的图形界面在后台也是转化为一个个的命令依次执行的。当前完成的工作也只是初步的完成了脚本实现，且需要一定的先决配置条件，后期仍有很大的改善空间，好好的学习一下shell脚本后应该可以使得步骤更为简化。
+能这么做完全是因为 Quartus 留出了相应的命令行接口，其实我们所使用的图形界面在后台也是转化为一个个的命令依次执行的。当前完成的工作也只是初步的完成了脚本实现，且需要一定的先决配置条件，后期仍有很大的改善空间，好好的学习一下 shell 脚本后应该可以使得步骤更为简化。
 
 Step 1 : 编写程序下载脚本文件(\*.sh)
-Step 2 : 编写bat文件调用`Nios2 Command Shell`并执行步骤1中的脚本文件
+Step 2 : 编写 bat 文件调用 `Nios2 Command Shell` 并执行步骤1中的脚本文件
 
-为了最快的完成此部分功能的开发，在shell脚本基础较少的情况下以上两个步骤通过更改Quartus安装路径下`altera\15.1\nios2eds`的`Nios II Command Shell.bat`和`nios2_command_shell.sh`文件来完成。**强烈建议对原文件进行备份后操作，下文中步骤也是对备份文件的更改。**
+为了最快的完成此部分功能的开发，在 shell 脚本基础较少的情况下以上两个步骤通过更改 Quartus 安装路径下 `altera\15.1\nios2eds` 的 `Nios II Command Shell.bat` 和 `nios2_command_shell.sh` 文件来完成。**强烈建议对原文件进行备份后操作，下文中步骤也是对备份文件的更改。**
 
 其中，
-nios2_command_shell.sh为Nios II Command Shell的运行脚本文件。
+nios2_command_shell.sh 为 Nios II Command Shell 的运行脚本文件。
 
-Nios II Command Shell.bat为bat脚本运行文件，windows环境下双击运行后即可调用`nios2_command_shell.sh`后进入Nios II Command Shell。
+Nios II Command Shell.bat 为 bat 脚本运行文件，windows 环境下双击运行后即可调用 `nios2_command_shell.sh` 后进入 Nios II Command Shell。
 
-另外，在以下内容中，设定Example.sof和Example.elf为演示下载用SOF和ELF文件名。
+另外，在以下内容中，设定 Example.sof 和 Example.elf 为演示下载用 SOF 和 ELF 文件名。
 
 ### sh脚本的更改
 
-**注意：此文件应在路径`altera\15.1\nios2eds`下。**
+**注意：此文件应在路径 `altera\15.1\nios2eds` 下。**
 
-* 将备份的`nios2_command_shell.sh`更改为方便自己使用的文件名，这里更改为`example_sh.sh`。
+* 将备份的 `nios2_command_shell.sh` 更改为方便自己使用的文件名，这里更改为 `example_sh.sh`。
 * 找到以下区域
 
 ```bash
@@ -74,7 +74,7 @@ else
 fi
 ```
 
-* 在`# Use bash --norc to get a clean shell`这一行前，也就是`bash`命令前添加以下内容。
+* 在`# Use bash --norc to get a clean shell`这一行前，也就是 `bash` 命令前添加以下内容。
 
 
 ```bash
@@ -189,19 +189,19 @@ case ${SelNum} in
 
 ### bat文件的更改
 
-**注意：此文件应在路径`altera\15.1\nios2eds`下。**
+**注意：此文件应在路径 `altera\15.1\nios2eds` 下。**
 
-* 将备份的`Nios II Command Shell.bat`更改为方便自己使用的文件名，这里更改为`example_bat.bat`。
+* 将备份的 `Nios II Command Shell.bat` 更改为方便自己使用的文件名，这里更改为 `example_bat.bat` 。
 * 找到以下两行
 
 ```dos
 :run_nios2_command_shell
 @ "%_QUARTUS_BIN%\cygwin\bin\bash.exe" -c '%_NIOS2EDS_ROOT%nios2_command_shell.sh %*'
 ```
-* 将其中的`nios2_command_shell.sh`更改为你自己的sh文件,此处更改为`example_sh.sh`
+* 将其中的 `nios2_command_shell.sh` 更改为你自己的sh文件,此处更改为 `example_sh.sh`
 
 ### 简单说明
-**备注：有关命令的一些功能介绍，大部分可以在command line中在命令后跟上`--help`进行查阅**.如下所示。
+**备注：有关命令的一些功能介绍，大部分可以在 command line 中在命令后跟上 `--help` 进行查阅**.如下所示。
 ```bash
 nios2-configure-sof --help
 ```

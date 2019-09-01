@@ -1,5 +1,5 @@
 ---
-title: 原创 | Matlab之按位操作
+title: 原创 | Matlab 之按位操作
 date: 2016-11-10 10:47:34
 categories:
   - Matlab
@@ -7,13 +7,13 @@ tags:
   - Matlab
 ---
 
-在硬件语言Verilog中按位操作是相对容易的，在C语言中一样的用好逻辑符号“|”、“!”、“&”、“>>”等即可。但是在Matlab中一些类似的操作是判断或者逻辑用法，不能用在按位操作上。那么在其中就需要用到函数来进行操作了。
+在硬件语言 Verilog 中按位操作是相对容易的，在C语言中一样的用好逻辑符号 “|”、“!”、“&”、“>>” 等即可。但是在 Matlab 中一些类似的操作是判断或者逻辑用法，不能用在按位操作上。那么在其中就需要用到函数来进行操作了。
 
-在此记录两种按位操作的方法：按位左右移**bitshift**,按位与**bitand**。
+在此记录两种按位操作的方法：按位左右移 **bitshift**,按位与 **bitand**。
 
 <!--more-->
 
-## 按位左右移bitshift ##
+## 按位左右移 bitshift ##
 
 ```matlab
 C = bitshift(A,K) returns the value of A shifted to the left by K bits, 
@@ -28,7 +28,7 @@ C = bitshift(A,K) returns the value of A shifted to the left by K bits,
     less than or equal to intmax('uint64'), and bitshift 
     drops any bits overflowing 64 bits.
 ```
-其中K为正表示向左移，K为负值表示向右移；示例如下有：
+其中K为正表示向左移，K 为负值表示向右移；示例如下有：
 ```matlab
 >> bitshift(5,1)
 
@@ -43,7 +43,7 @@ ans =
      2
 
 ```
-## 按位与bitand ##
+## 按位与 bitand ##
 
 ```matlab
 C = bitand(A,B) returns the bitwise AND of arguments A and B, 

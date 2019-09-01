@@ -1,5 +1,5 @@
 ---
-title: 原创 | 如何使用SignalTap观察wire与reg值
+title: 原创 | 如何使用 SignalTap 观察 wire 与 reg 值
 date: 2016-11-10 11:47:34
 categories:
   - Quartus
