@@ -10,7 +10,7 @@ else:
     info = "auto push at " + str(datetime.datetime.now().strftime('%Y-%m-%d %H:%M %p'))
 
 gen_toc()
-auto_cnblog()
+# auto_cnblog()
 
 # print('-------------------------------------------')
 # print('---> git status ---------------------------')

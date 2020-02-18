@@ -141,15 +141,18 @@ def newPost(blogid, usr, passwd, post, publish):
 
 
 def post_art(path, publish=True):
+    # print(path)
     title = os.path.basename(path)  # 获取文件名做博客文章标题
+    # print(title)
     [title, _] = os.path.splitext(title)  # 去除扩展名
     with open(path, "r", encoding="utf-8") as f:
         post = dict(description=f.read(), title=title)
         # post["categories"] = ["[Markdown]"]
         # mt_keywords
-
+        # print(title)
         if title in title2id.keys():  # 博客里已经存在这篇文章
             mwb.editPost(title2id[title], usr, passwd, post, publish)
+            print(title)
             print("Update:[title=%s][postid=%s][publish=%r]" %
                   (title, title2id[title], publish))
             return (title, title2id[title], publish)
@@ -188,12 +191,13 @@ def cnblog_post():
     发布文章
     '''
     for mdfile in glob.glob(art_path + "*.md"):
+        print(mdfile)
         post_art(mdfile, True)
-
 
 def hexo2cnblog():
     for mdfile in glob.glob(pst_path + "*.md"):
         # print(mdfile)
+        # exit()
 
         f = open(mdfile, "r", encoding="utf-8")
         mdcontents = f.read()

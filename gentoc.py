@@ -83,6 +83,10 @@ def gen_toc_mdfile(mdfile, toc_info):
     contexts.append('tags:')
     contexts.append('  - TOC')
     contexts.append('---')
+    contexts.append('')
+    contexts.append('TOC')
+    contexts.append('')
+    contexts.append('<!--more-->')
 
     tmp = []
     for item in toc_info:
