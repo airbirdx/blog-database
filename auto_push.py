@@ -2,13 +2,14 @@ import subprocess
 import datetime
 import sys
 from cnblog import *
-
+from gentoc import *
 
 if len(sys.argv) == 2:
     info = str(sys.argv[1])
 else:
     info = "auto push at " + str(datetime.datetime.now().strftime('%Y-%m-%d %H:%M %p'))
 
+gen_toc()
 auto_cnblog()
 
 # print('-------------------------------------------')
