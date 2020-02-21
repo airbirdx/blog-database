@@ -98,7 +98,7 @@ def gen_toc_mdfile(mdfile, toc_info):
     for tmp in toc_info:
         title, date, link, categories, tags = tmp        
         p_title = title
-        p_link = 'www.airbird.info/' + date[:4] + '/' + link
+        p_link = 'https://www.airbird.info/' + date[:4] + '/' + link
         for p_cate in categories:
             re_info.append([p_cate, p_title, p_link, date])
 
